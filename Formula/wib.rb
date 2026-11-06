@@ -2,7 +2,6 @@
 class Wib < Formula
   desc "Shell history suggestions under your zsh prompt as you type"
   homepage "https://github.com/duylongpro99/wuts-that-bash"
-  version "0.2.0"
   license "MIT"
 
   on_macos do
