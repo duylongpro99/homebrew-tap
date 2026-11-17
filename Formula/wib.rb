@@ -6,23 +6,23 @@ class Wib < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.2.0/wib-aarch64-apple-darwin.tar.gz"
-      sha256 "a4d9bdd3e6d2d69a1cd199ea3b522da3dfd252f19fe6d0646982506ba8787d6c"
+      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.3.1/wib-aarch64-apple-darwin.tar.gz"
+      sha256 "a0bb3b3e0255fba8910003b001ae3b854c6fb4814cd1758346617d20de1c63b3"
     end
     on_intel do
-      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.2.0/wib-x86_64-apple-darwin.tar.gz"
-      sha256 "66e9d9b74abc987a4e8e26ccab728582a2df993e01b7bc8a6b48f5e58ce5ab01"
+      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.3.1/wib-x86_64-apple-darwin.tar.gz"
+      sha256 "a2f862b65b398d90e5a2d2893a693e6d2f16e05ee193ea43d3339027d5ede749"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.2.0/wib-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "34f01c5d5e77ec05dd30fba129884a6cb77c2d6e109337a9a7465d040738c96f"
+      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.3.1/wib-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "470b1d310587f54f80381df6f0c94442c535347721de37ea0d2f4bf431138c2f"
     end
     on_intel do
-      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.2.0/wib-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "051a29f5d8f141268ade1051f8ff95a97582f16ce0e88cae82c2ff18304b0a85"
+      url "https://github.com/duylongpro99/wuts-that-bash/releases/download/v0.3.1/wib-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "f620d1e4600e6903c4408872047124c31fb6fdf1f1e9fb50a29c1f0359624ca2"
     end
   end
 
@@ -32,8 +32,9 @@ class Wib < Formula
 
   def caveats
     <<~TEXT
-      Add this to the end of ~/.zshrc (after oh-my-zsh and other plugins), then open a new terminal:
-        eval "$(wib init zsh)"
+      Run this once, then open a new terminal (or run `exec zsh`):
+        wib setup zsh
+      Terminals inside an app (Orca, VS Code, Cursor, JetBrains) need that app restarted.
       After an upgrade, open a new terminal so zsh loads the new version.
     TEXT
   end
